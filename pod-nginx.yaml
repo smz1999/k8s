@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  namespace: default
+  labels:
+    run: nginx
+spec:
+  containers:
+  - name: nginx
+    image: docker.io/nginx:1.14-alpine
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 80
+      protocol: TCP
